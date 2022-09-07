@@ -1,5 +1,6 @@
 let playerAttack
 let enemyAttack
+let fightResult
 
 function randomNumber(min,max){
     return Math.floor(Math.random()*(max-min+1)+min)
@@ -63,13 +64,28 @@ function plantAttack(){
 function enemyRandomAttack(){
     let attackList = ["🔥", "💧", "🌱"]
     enemyAttack = attackList[randomNumber(1, 3) - 1]
-    fightResult()
+    fightLogic()
 }
 
-function fightResult(){
+function fightLogic(){
+    if(playerAttack == enemyAttack){
+        fightResult = "EMPATE"
+    } else if(playerAttack == "💧" && enemyAttack == "🔥"){
+        fightResult = "GANASTE"
+    } else if(playerAttack == "🔥" && enemyAttack == "🌱"){
+        fightResult = "GANASTE"
+    } else if(playerAttack == "🌱" && enemyAttack == "💧"){
+        fightResult = "GANASTE"
+    } else{
+        fightResult = "PERDISTE PUTO MANCO DE MIERDA"
+    }
+    printResult()
+}
+
+function printResult(){
     let messagesSection = document.getElementById("messages")
     let paragraph = document.createElement('p')
-    paragraph.innerHTML = "Tu mascota atacó con " + playerAttack + ", la mascota del enemigo atacó con " + enemyAttack + ":P"
+    paragraph.innerHTML = "Tu mascota atacó con " + playerAttack + ", la mascota del enemigo atacó con " + enemyAttack + " - " + fightResult
     messagesSection.appendChild(paragraph)
 }
 
