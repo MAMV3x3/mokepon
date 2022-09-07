@@ -7,6 +7,7 @@ function pickPlayerPet(){
     let inputHipodoge = document.getElementById("hipodoge").checked
     let inputCapipepo = document.getElementById("capipepo").checked
     let inputRatigueya = document.getElementById("ratigueya").checked
+    let spanPlayerPet = document.getElementById("player-pet-name")
     let petPicked = ""
     if(inputHipodoge){
         petPicked = "Hipodoge"
@@ -18,7 +19,8 @@ function pickPlayerPet(){
     if(!petPicked){
         alert("⚠️ Por favor, selecciona a tu mascota ⚠️")
     } else{
-        alert("Haz seleccionado a " + petPicked)
+        //alert("Haz seleccionado a " + petPicked)
+        spanPlayerPet.innerHTML = petPicked
     }
 }
 
