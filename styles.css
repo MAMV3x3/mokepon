@@ -7,7 +7,7 @@ body {
 
 .title {
     color: #F6F6F6;
-    width: 310px;
+    width: 350px;
     height: 50px;
     text-align: center;
     font-size: 50px;
@@ -46,7 +46,7 @@ body {
 }
 
 .mokepon-card img {
-    width: 74px;
+    width: 123px;
     height: 123px
 }
 

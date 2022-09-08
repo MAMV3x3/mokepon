@@ -35,11 +35,11 @@ function pickPlayerPet(){
     let spanPlayerPet = document.getElementById("player-pet-name")
     let petPickedPlayer
     if(inputHipodoge){
-        petPickedPlayer = "Alan"
+        petPickedPlayer = "Red"
     } else if(inputCapipepo){
-        petPickedPlayer = "Miguel"
+        petPickedPlayer = "Green"
     } else if(inputRatigueya){
-        petPickedPlayer = "Ines"
+        petPickedPlayer = "Blue"
     }
     if(!petPickedPlayer){
         alert("⚠️ Por favor, selecciona a tu mascota ⚠️")
@@ -57,7 +57,7 @@ function pickEnemyPet(){
     attackSection.style.display = 'flex'
     let resetSection = document.getElementById('reset')
     resetSection.style.display = 'none'
-    let petNames = ["Alan", "Miguel", "Ines"]
+    let petNames = ["Red", "Green", "Blue"]
     let spanEnemyPet = document.getElementById("enemy-pet-name")
     spanEnemyPet.innerHTML = petNames[randomNumber(1, 3) - 1]
 }
@@ -73,12 +73,12 @@ function waterAttack(){
 }
 
 function plantAttack(){
-    playerAttack = "🌱"
+    playerAttack = "❄️"
     enemyRandomAttack()
 }
 
 function enemyRandomAttack(){
-    let attackList = ["🔥", "💧", "🌱"]
+    let attackList = ["🔥", "💧", "❄️"]
     enemyAttack = attackList[randomNumber(1, 3) - 1]
     fightLogic()
 }
@@ -95,11 +95,11 @@ function fightLogic(){
         fightResult = "✅"
         enemyLives--
         spanEnemyLives.innerHTML = enemyLives
-    } else if(playerAttack == "🔥" && enemyAttack == "🌱"){
+    } else if(playerAttack == "🔥" && enemyAttack == "❄️"){
         fightResult = "✅"
         enemyLives--
         spanEnemyLives.innerHTML = enemyLives
-    } else if(playerAttack == "🌱" && enemyAttack == "💧"){
+    } else if(playerAttack == "❄️" && enemyAttack == "💧"){
         fightResult = "✅"
         enemyLives--
         spanEnemyLives.innerHTML = enemyLives
