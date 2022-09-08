@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;900&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #28527A;
+}
+
+.title {
+    color: #F6F6F6;
+    width: 310px;
+    height: 50px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.subtitle {
+    color: #F6F6F6;
+    font-size: 30px;
+}
+
+.cards {
+    display: flex;
+    gap: 10px;
+}
+
+#pet-selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mokepon-card {
+    width: 100px;
+    height: 100px;
+    background: #FBEEAC;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 3px solid #F4D160;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input {
+    display: none;
+}

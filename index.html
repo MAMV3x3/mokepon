@@ -6,26 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mokepon</title>
     <script src="./js/logic.js"></script>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1>Mokepon 🔥💧🌱</h1>
-
     <section id="pet-selector">
-        <h2>Elige tu mascota:</h2>
+        <h1 class="title">Mokepon</h1>
 
-        <label for="vohon">Vohon</label>
-        <input type="radio" name="pet" id="vohon" />
+        <h2 class="subtitle">Elige tu mascota:</h2>
 
-        <label for="roslyna">Roslyna</label>
-        <input type="radio" name="pet" id="roslyna" />
+        <div class="cards">
+            <label class="mokepon-card" for="vohon">
+                <p>Vohon</p>
+            </label>
+            <input type="radio" name="pet" id="vohon" />
 
-        <label for="woda">Woda</label>
-        <input type="radio" name="pet" id="woda" />
+            <label class="mokepon-card" for="roslyna">Roslyna</label>
+            <input type="radio" name="pet" id="roslyna" />
 
-        <button id="button-pet">Seleccionar</button>
+            <label class="mokepon-card" for="woda">Woda</label>
+            <input type="radio" name="pet" id="woda" />
+        </div>
+
+        <button class="button-card" id="button-pet">Seleccionar</button>
     </section>
 
     <section id="attack-selector">
+        <h1 class="title">Mokepon 🔥💧🌱</h1>
+
         <h2>Elige tu ataque:</h2>
 
         <p>Tu mascota <span id="player-pet-name"></span> tiene <span id="player-lives">3</span>❤️</p>
