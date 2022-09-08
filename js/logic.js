@@ -35,11 +35,11 @@ function pickPlayerPet(){
     let spanPlayerPet = document.getElementById("player-pet-name")
     let petPickedPlayer
     if(inputHipodoge){
-        petPickedPlayer = "Vohon"
+        petPickedPlayer = "Alan"
     } else if(inputCapipepo){
-        petPickedPlayer = "Roslyna"
+        petPickedPlayer = "Miguel"
     } else if(inputRatigueya){
-        petPickedPlayer = "Woda"
+        petPickedPlayer = "Ines"
     }
     if(!petPickedPlayer){
         alert("⚠️ Por favor, selecciona a tu mascota ⚠️")
@@ -54,10 +54,10 @@ function pickEnemyPet(){
     let petSection = document.getElementById('pet-selector')
     petSection.style.display = 'none'
     let attackSection = document.getElementById('attack-selector')
-    attackSection.style.display = 'block'
+    attackSection.style.display = 'flex'
     let resetSection = document.getElementById('reset')
     resetSection.style.display = 'none'
-    let petNames = ["Vohon", "Roslyna", "Woda"]
+    let petNames = ["Alan", "Miguel", "Ines"]
     let spanEnemyPet = document.getElementById("enemy-pet-name")
     spanEnemyPet.innerHTML = petNames[randomNumber(1, 3) - 1]
 }
@@ -120,10 +120,19 @@ function fightLogic(){
 }
 
 function printResult(){
-    let messagesSection = document.getElementById("messages")
-    let paragraph = document.createElement('p')
-    paragraph.innerHTML = "Tu mascota atacó con " + playerAttack + ", la mascota del enemigo atacó con " + enemyAttack + " - " + fightResult
-    messagesSection.appendChild(paragraph)
+    let messagesSection = document.getElementById("result")
+    let messagePlayerAttacks = document.getElementById("player-attacks")
+    let messageEnemyAttacks = document.getElementById("enemy-attacks")
+
+    let newPlayerAttack = document.createElement('p')
+    let newEnemyAttack = document.createElement('p')
+
+    messagesSection.innerHTML = fightResult
+    newPlayerAttack.innerHTML = playerAttack
+    newEnemyAttack.innerHTML = enemyAttack
+    
+    messagePlayerAttacks.appendChild(newPlayerAttack)
+    messageEnemyAttacks.appendChild(newEnemyAttack)
 }
 
 function endGameMessage(status){
@@ -135,14 +144,12 @@ function endGameMessage(status){
     buttonFire.disabled = true
     buttonWater.disabled = true
     buttonPlant.disabled = true
-    let messagesSection = document.getElementById("messages")
-    let paragraph = document.createElement('p')
+    let messagesSection = document.getElementById("result")
     if(status){
-        paragraph.innerHTML = "🥳 ¡Ganaste el combate! 🥳"
+        messagesSection.innerHTML = "🥳 ¡Ganaste el combate! 🥳"
     } else{
-        paragraph.innerHTML = "❌ Perdiste el combate ❌"
+        messagesSection.innerHTML = "❌ Perdiste el combate ❌"
     }
-    messagesSection.appendChild(paragraph)
 }
 
 function resetGame(){

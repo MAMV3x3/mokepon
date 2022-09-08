@@ -10,7 +10,7 @@ body {
     width: 310px;
     height: 50px;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 900;
 }
 
@@ -19,9 +19,9 @@ body {
     font-size: 30px;
 }
 
-.cards {
+.cards, .attacks-cards {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 #pet-selector {
@@ -32,16 +32,134 @@ body {
 }
 
 .mokepon-card {
-    width: 100px;
-    height: 100px;
-    background: #FBEEAC;
+    width: 180px;
+    height: 202px;
+    background: #7194c9ab;
     padding: 10px;
     box-sizing: border-box;
-    border: 3px solid #F4D160;
     border-radius: 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #F6F6F6
+}
+
+.mokepon-card img {
+    width: 74px;
+    height: 123px
+}
+
+#button-pet {
+    width: 180px;
+    height: 50px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid #F6F6F6;
+    color: #F6F6F6;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: medium;
+    margin-top: 30px;
+}
+
+#button-pet:hover {
+    background-color: #7194c9ab;
+    cursor: pointer;
 }
 
 input {
     display: none;
+}
+
+input:hover + label {
+    background-color: rgb(255, 69, 69);
+    cursor: pointer;
+}
+
+input:checked + label {
+    background-color: rgb(0, 154, 38);
+}
+
+#attack-selector {
+    flex-direction: column;
+    align-items: center;
+}
+
+.attack-button {
+    background-color: #7194c9ab;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: medium;
+    color: #F6F6F6;
+    border: transparent;
+    width: 150px;
+}
+
+.attack-button:hover {
+    background-color: rgb(255, 69, 69);
+    cursor: pointer;
+}
+
+#messages {
+    width: 280px;
+    background: #7194c9ab;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #F6F6F6;
+    border: 2px solid #F6F6F6;
+    font-size: large;
+}
+
+#button-reset {
+    border: transparent;
+    background-color: transparent;
+    color: #EAE3D2;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#button-reset:hover {
+    color: #f0cf82;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.attack-board {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    color: #F6F6F6;
+    margin-top: 10px;
+}
+
+#player-lives, #enemy-lives {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.player-attacks, .enemy-attacks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #F6F6F6;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+@media (max-width: 584px) {
+    .cards, .attacks-cards {
+        flex-direction: column;
+    }
 }

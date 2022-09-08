@@ -10,46 +10,64 @@
 </head>
 <body>
     <section id="pet-selector">
-        <h1 class="title">Mokepon</h1>
+        <h1 class="title">Nerd Battle</h1>
 
-        <h2 class="subtitle">Elige tu mascota:</h2>
+        <h2 class="subtitle">Elige tu personaje:</h2>
 
         <div class="cards">
-            <label class="mokepon-card" for="vohon">
-                <p>Vohon</p>
-            </label>
             <input type="radio" name="pet" id="vohon" />
-
-            <label class="mokepon-card" for="roslyna">Roslyna</label>
+            <label class="mokepon-card" for="vohon">
+                <p>Alan</p>
+                <img id="mokepon-img" src="./assets/alan.png" alt="Alan">
+            </label>
+            
             <input type="radio" name="pet" id="roslyna" />
-
-            <label class="mokepon-card" for="woda">Woda</label>
+            <label class="mokepon-card" for="roslyna">
+                <p>Miguel</p>
+                <img src="./assets/sheldon.png" alt="Miguel">
+            </label>
+            
             <input type="radio" name="pet" id="woda" />
+            <label class="mokepon-card" for="woda">
+                <p>Ines</p>
+                <img src="./assets/ineso.png" alt="Ines">
+            </label>
         </div>
 
-        <button class="button-card" id="button-pet">Seleccionar</button>
+        <button id="button-pet">Seleccionar</button>
     </section>
 
     <section id="attack-selector">
-        <h1 class="title">Mokepon 🔥💧🌱</h1>
+        <h1 class="title">Nerd Battle</h1>
 
-        <h2>Elige tu ataque:</h2>
+        <h2 class="subtitle">Elige tu ataque:</h2>
 
-        <p>Tu mascota <span id="player-pet-name"></span> tiene <span id="player-lives">3</span>❤️</p>
-        <p>El enemigo <span id="enemy-pet-name"></span> tiene <span id="enemy-lives">3</span>❤️</p>
+        <div class="attacks-cards">
+            <button id="button-fire" class="attack-button">Fuego 🔥</button>
+            <button id="button-water" class="attack-button">Agua 💧</button>
+            <button id="button-plant" class="attack-button">Planta 🌱</button>
+        </div>
 
-        <p>
-            <button id="button-fire">Fuego 🔥</button>
-            <button id="button-water">Agua 💧</button>
-            <button id="button-plant">Planta 🌱</button>
-        </p>
-    </section>
+        <div id="messages">
+            <p id="result">may the force be with you</p>
 
-    <section id="messages">
-    </section>
+            <section id="reset">
+                <button id="button-reset">Reiniciar</button>
+            </section>
+        </div>
 
-    <section id="reset">
-        <button id="button-reset">Reiniciar</button>
+        <div class="attack-board">
+            <div class="player-attacks">
+                <p id="player-lives">3</p>
+                <p id="player-pet-name"></p>
+                <div id="player-attacks"></div>
+            </div>
+            <div class="enemy-attacks">
+                <p id="enemy-lives">3</p>
+                <p id="enemy-pet-name"></p>
+                <div id="enemy-attacks"></div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
