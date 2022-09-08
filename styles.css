@@ -135,7 +135,7 @@ input:checked + label {
 
 .attack-board {
     display: grid;
-    grid-template-columns: 100px 100px;
+    grid-template-columns: 130px 130px;
     color: #F6F6F6;
     margin-top: 10px;
 }

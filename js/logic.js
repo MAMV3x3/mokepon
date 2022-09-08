@@ -94,19 +94,19 @@ function fightLogic(){
     } else if(playerAttack == "💧" && enemyAttack == "🔥"){
         fightResult = "✅"
         enemyLives--
-        spanEnemyLives.innerHTML = enemyLives
+        spanEnemyLives.innerHTML = enemyLives + "❤️"
     } else if(playerAttack == "🔥" && enemyAttack == "❄️"){
         fightResult = "✅"
         enemyLives--
-        spanEnemyLives.innerHTML = enemyLives
+        spanEnemyLives.innerHTML = enemyLives + "❤️"
     } else if(playerAttack == "❄️" && enemyAttack == "💧"){
         fightResult = "✅"
         enemyLives--
-        spanEnemyLives.innerHTML = enemyLives
+        spanEnemyLives.innerHTML = enemyLives + "❤️"
     } else{
         fightResult = "❌"
         playerLives--
-        spanPlayerLives.innerHTML = playerLives
+        spanPlayerLives.innerHTML = playerLives + "❤️"
     }
     printResult()
     if(playerLives == 0 || enemyLives == 0){
